@@ -1,0 +1,18 @@
+pokesearch:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/code
+    links:
+      - elasticsearch
+
+# If elasticsearch fails to run (bootstrap checks failed)
+# Run this on your local machine
+# sudo sysctl -w vm.max_map_count=262144
+elasticsearch:
+  image: elasticsearch:6.5.4
+  expose: 
+    - "9200"
+  ports: 
+    - "9200:9200"
