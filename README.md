@@ -1,6 +1,6 @@
 # PokeSearch
 
-![](search.png)
+![](search.gif)
 
 Simple NodeJS + Express + Elasticsearch app to search Pokemons
 
